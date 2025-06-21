@@ -5,12 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DataSavyWithSiddhesh</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="icon" href="{{ url_for('static', filename='images/icon.png') }}" type="image/x-icon">
 </head>
 <body>
 
 <!-- Navigation Bar -->
 <nav class="navbar">
-  <div class="logo">DataSavyWithSiddhesh</div>
+  <div class="logo">
+    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+    DataSavyWithSiddhesh
+  </div>
   <ul class="nav-links">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
@@ -37,12 +41,13 @@
 <div class="container" id="about" data-animate>
   <h1>About Me</h1>
   <p>
-    I'm a process-driven and self-motivated Data Scientist with hands-on experience in data analysis, predictive modeling, and data visualization. With a strong foundation in statistics and machine learning, I specialize in uncovering patterns and translating raw data into impactful business insights.
+    I'm a data-driven dreamer with a caffeine-fueled passion for data science, backend logic, and lifelong learning. Whether it's crunching numbers, decoding patterns, or debugging one-liners at 2 AM — I'm all in for the thrill of the tech chase. 🚀
 
-I thrive on solving complex problems using tools like Python, SQL, Power BI, and Tableau, and I'm passionate about transforming ambiguity into clarity through data. From building robust models to visualize trends, to delivering data-driven recommendations that improve efficiency and fuel strategic growth—my goal is to turn data into actionable intelligence.
+    📊 I believe data tells stories, and I'm here to be the translator. From building ML models that actually behave 🤖 to visualizing insights that make you go “Whoa!” — I'm obsessed with turning raw data into real-world impact. Whether it's a solo Kaggle challenge or a high-energy group project, I bring both curiosity and collaboration to the table.
 
-Always learning, always improving—I stay ahead of the curve in the ever-evolving data landscape by constantly exploring new tools, techniques, and innovations.
-  </p>
+    🗄️ Databases? Oh, I love those. Be it MongoDB, MySQL, or just a humble .csv, I enjoy diving into structured chaos and coming out with optimized order. I've used machine learning on all sorts of datasets (yes, some were messy — but hey, that's half the fun!), and I regularly share my findings in technical blogs to keep the knowledge flowing.
+
+    🎓 I hold a B.Tech in Computer Science with Honors in Data Science from Symbiosis Institute of Technology, Pune — proudly wearing both hats: engineer & data whisperer. By day, I’m an Associate Consultant at Oracle Financial Services Software, and by night, you'll find me exploring Graph Databases, wrangling DOM elements with JavaScript, or just enjoying a good football stat.</p>
 </div>
 
 <!-- <div class="container" id="skills">
@@ -135,8 +140,8 @@ Always learning, always improving—I stay ahead of the curve in the ever-evolvi
 
 <div class="container" id="resume">
   <h1>Resume</h1>
-  <iframe src="{{ url_for('static', filename='resume/Siddhesh_Shankar_Resume.pdf') }}" width="100%" height="600px" style="border: none;"></iframe>
-  <a href="{{ url_for('static', filename='resume/Siddhesh_Shankar_Resume.pdf') }}" download class="download-btn">Download Resume</a>
+  <iframe src="{{ url_for('static', filename='resume/Siddhesh Shankar - Data Scientist.pdf') }}" width="100%" height="600px" style="border: none;"></iframe>
+  <a href="{{ url_for('static', filename='resume/Siddhesh Shankar - Data Scientist.pdf') }}" download class="download-btn">Download Resume</a>
 </div>
 
 <div class="container" id="contact">
