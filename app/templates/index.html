@@ -1,10 +1,175 @@
-{% extends 'base.html' %}
-{% block content %}
-<div class="container">
-  <img src="{{ url_for('static', filename='images/main_profile.jpeg') }}" 
-       alt="Siddhesh"
-       class="profile-pic">
-  <h1>Hi, I'm Siddhesh</h1>
-  <p class="subtitle">Aspiring Data Scientist | Backend Engineer | Insight Seeker</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataSavyWithSiddhesh</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="logo">DataSavyWithSiddhesh</div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <!-- <li><a href="#skills">Skills</a></li> -->
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#resume">Resume</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="container" id="home" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+  <img src="{{ url_for('static', filename='images/about_me.jpeg') }}" alt="Siddhesh" class="profile-pic">
+  <h1 style="margin-top: 1rem;">👋 Hi, I'm Siddhesh Shankar</h1>
+  <p class="subtitle">Aspiring Data Scientist | Backend Engineer | Data Insight Seeker</p>
+  <p style="margin-top: 1rem; max-width: 700px;">
+    Welcome to my digital space where data meets impact. I turn raw numbers into real insights that drive decision-making and efficiency. Explore my work, experience, and let's connect!
+  </p>
 </div>
-{% endblock %}
+
+
+<div class="container" id="about" data-animate>
+  <h1>About Me</h1>
+  <p>
+    I'm a process-driven and self-motivated Data Scientist with hands-on experience in data analysis, predictive modeling, and data visualization. With a strong foundation in statistics and machine learning, I specialize in uncovering patterns and translating raw data into impactful business insights.
+
+I thrive on solving complex problems using tools like Python, SQL, Power BI, and Tableau, and I'm passionate about transforming ambiguity into clarity through data. From building robust models to visualize trends, to delivering data-driven recommendations that improve efficiency and fuel strategic growth—my goal is to turn data into actionable intelligence.
+
+Always learning, always improving—I stay ahead of the curve in the ever-evolving data landscape by constantly exploring new tools, techniques, and innovations.
+  </p>
+</div>
+
+<!-- <div class="container" id="skills">
+  <h1>Skills</h1>
+  <div class="skills-section">
+    <div class="skill"><div class="skill-name">Python</div><div class="skill-bar"><div class="skill-fill" style="width: 80%;">80%</div></div></div>
+    <div class="skill"><div class="skill-name">SQL</div><div class="skill-bar"><div class="skill-fill" style="width: 85%;">85%</div></div></div>
+    <div class="skill"><div class="skill-name">Java</div><div class="skill-bar"><div class="skill-fill" style="width: 75%;">75%</div></div></div>
+    <div class="skill"><div class="skill-name">JavaScript</div><div class="skill-bar"><div class="skill-fill" style="width: 70%;">70%</div></div></div>
+    <div class="skill"><div class="skill-name">Oracle DB</div><div class="skill-bar"><div class="skill-fill" style="width: 80%;">80%</div></div></div>
+    <div class="skill"><div class="skill-name">Data Analysis</div><div class="skill-bar"><div class="skill-fill" style="width: 80%;">80%</div></div></div>
+    <div class="skill"><div class="skill-name">Machine Learning</div><div class="skill-bar"><div class="skill-fill" style="width: 65%;">65%</div></div></div>
+  </div>
+</div> -->
+
+<div class="container" id="projects">
+  <h1>Projects</h1>
+  <div class="project-grid">
+    <div class="project-card"><h2>QwiKart</h2><p>Just-In-Time e-commerce platform with near 100% fulfillment.</p><a href="https://github.com/SiddheshCodeMaster/Qwikart" target="_blank">GitHub →</a></div>
+    <div class="project-card"><h2>AGanTCAM</h2><p>Alzheimer detection using Vision Transformers and Grad-CAM.</p><a href="https://github.com/SiddheshCodeMaster/Alzheimer_detection_using_Vision_Transformer" target="_blank">GitHub →</a></div>
+    <div class="project-card"><h2>Fake News Classifier</h2><p>Deep learning NLP model to classify fake news articles.</p><a href="https://github.com/SiddheshCodeMaster/Kaggle-Fake-News-Classifier-using-Deep-Learning" target="_blank">GitHub →</a></div>
+    <div class="project-card"><h2>IMDB Scraper</h2><p>Web scraper to collect movie data from IMDB using BeautifulSoup.</p><a href="https://github.com/SiddheshCodeMaster/Web-Scrapping-IMDB-Website-Python" target="_blank">GitHub →</a></div>
+    <div class="project-card"><h2>Selenium Scraper</h2><p>Dynamic web scraping using Selenium automation.</p><a href="https://github.com/SiddheshCodeMaster/Web-Scraping-uisng-Selenium" target="_blank">GitHub →</a></div>
+  </div>
+</div>
+
+<div class="container" id="experience">
+  <h1>Experience</h1>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h2>Oracle Financial Services Software (OFSS) - Associate Consultant</h2>
+        <span class="timeline-date">Jul 2023 – Present</span>
+        <p>• <strong>Financial Transactions & Reconciliation:</strong> Oversaw End-of-Day (EOD) and reconciliation processing for over 70,000+ daily financial transactions (MT940, MT950, MT942) in the Nostro Reconciliation System (NRS) for HDFC Bank, improving transaction accuracy by ~25% and enhancing operational efficiency.</p>
+
+        <p>• <strong>RESTful API Development:</strong> Designed and developed 3 production-grade RESTful APIs using Java (JAX-RS) within the FLEXCUBE architecture, adhering to HATEOAS principles to ensure clean resource representation and streamlined internal system communication.</p>
+
+        <p>• <strong>Software Development Lifecycle (SDLC):</strong> Contributed to 3+ end-to-end project cycles, handling everything from requirements gathering to deployment and post-release support, ensuring 100% on-time delivery and alignment with client specifications.</p>
+
+        <p>• <strong>Backend & Frontend Development:</strong> Developed and maintained full-stack modules using Java (JAX-RS), vanilla JavaScript, and Oracle PL/SQL, delivering scalable internal banking solutions and enhancing performance across multiple high-traffic enterprise modules.</p>
+
+        <p>• <strong>Code Quality & Testing:</strong> Maintained clean, efficient, and production-ready code by consistently applying best practices and leveraging SonarLint for static code analysis, significantly reducing bugs and improving maintainability.</p>
+
+        <p>• <strong>Integration & Middleware Development:</strong> Engineered a middleware wrapper enabling seamless communication between SOAP-based legacy systems and RESTful services, reducing integration time by 40% and boosting service interoperability.</p>
+
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h2>EASYECOM Pvt. Ltd. - Business Analyst Intern</h2>
+        <span class="timeline-date">Jan 2024 - Jun 2024</span>
+        <p>• <strong>SQL & Data Extraction:</strong> Developed SQL proficiency to extract, analyse, and manipulate data efficiently, optimizing query performance for various business needs.</p>
+
+        <p>• <strong>Data Pipeline Development:</strong> Built foundational data pipelines to automate routine data collection and transformation tasks using SQL and scripting, improving data availability and minimizing manual intervention by ~30%.</p>
+
+        <p>• <strong>Dashboard Automation:</strong> Automated data-fetching processes for dashboards using JavaScript, resulting in a 40% reduction in manual reporting time and improved refresh reliability.</p>
+
+        <p>• <strong>Data Cleaning & Preparation:</strong> Utilized Excel for data cleaning and preprocessing, ensuring data accuracy and consistency for analysis.</p>
+
+        <p>• <strong>Data Visualization & Reporting:</strong> Created interactive dashboards and reports in Looker Studio and Power BI, helping stakeholders derive actionable insights and supporting data-driven decision-making for key operations.</p>
+
+        <p>• <strong>API Integration & Development:</strong> Built Google Apps Script solutions to interface with Zoho APIs, automating routine workflows. Also explored Python-based API development to support internal data automation use cases.</p>
+
+        <p>• <strong>Event Tracking & Analytics:</strong> Gained hands-on experience with Amplitude for event tracking and funnel analysis, improving understanding of user behavior metrics and their application in strategic decisions.</p>
+
+        <p>• <strong>Supply Chain Analytics:</strong> Analysed the collaboration between Inventory, Order, and Warehouse Management Systems to optimize supply chain operations. Conducted warehouse visits for hands-on learning.</p>
+
+        <p>• <strong>Client Collaboration:</strong> Participated in 10+ client meetings with major e-commerce and D2C brands such as Amazon, Meesho, Flipkart Smart, Man Matters, and Myntra, gathering business requirements and contributing to data-backed solution design.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h2>Genefied Brand Protection Solutions - Data Analyst Intern</h2>
+        <span class="timeline-date">2023</span>
+        <p>• <strong>Dashboard Development & Data Visualization:</strong> Designed interactive dashboards for client presentations using Power BI and Google Analytics to support data-driven decision-making.</p>
+
+        <p>• <strong>Client Engagement & Data Solutions:</strong> Met with clients, including BookMyShow and KEI Industries, to present data-driven insights and recommend strategic solutions.</p>
+
+        <p>• <strong>Data Resource Optimization:</strong> Assisted in optimizing data utilization within the company, ensuring efficient data management and reporting practices.</p>
+
+        <p>• <strong>Research & Development:</strong> Worked closely with the Founder on the R&D of new data architecture, contributing to improvements in the company’s data infrastructure and analytical capabilities.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="resume">
+  <h1>Resume</h1>
+  <iframe src="{{ url_for('static', filename='resume/Siddhesh_Shankar_Resume.pdf') }}" width="100%" height="600px" style="border: none;"></iframe>
+  <a href="{{ url_for('static', filename='resume/Siddhesh_Shankar_Resume.pdf') }}" download class="download-btn">Download Resume</a>
+</div>
+
+<div class="container" id="contact">
+  <h1>Contact Me</h1>
+  <form action="https://formspree.io/f/xwpbnoaw" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="_replyto" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2025 DataSavyWithSiddhesh · Built by Siddhesh Shankar</p>
+  <div class="footer-links">
+    <a href="https://github.com/SiddheshCodeMaster" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/siddheshshankar" target="_blank">LinkedIn</a>
+    <a href="mailto:shankarsiddhesh1606@gmail.com">Email</a>
+  </div>
+</footer>
+
+<button class="theme-toggle" onclick="document.body.classList.toggle('dark')">🌓</button>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
