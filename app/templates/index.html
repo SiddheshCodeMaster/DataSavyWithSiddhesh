@@ -22,14 +22,16 @@
   </ul>
 </nav>
 
-<div class="container" id="home" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+<div class="container" id="home" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 8rem 1rem;">
   <img src="{{ url_for('static', filename='images/about_me.jpeg') }}" alt="Siddhesh" class="profile-pic">
-  <h1 style="margin-top: 1rem;">👋 Hi, I'm Siddhesh Shankar</h1>
-  <p class="subtitle">Aspiring Data Scientist | Backend Engineer | Data Insight Seeker</p>
-  <p style="margin-top: 1rem; max-width: 700px;">
-    Welcome to my digital space where data meets impact. I turn raw numbers into real insights that drive decision-making and efficiency. Explore my work, experience, and let's connect!
+  <h1 style="margin-top: 1.2rem; font-size: 2.5rem; align-items: center; justify-content: center; text-align: center;">👋 Hi, I'm Siddhesh Shankar</h1>
+  <p class="subtitle" style="margin-top: 0.5rem;">Aspiring Data Scientist | Backend Engineer | Data Insight Seeker</p>
+  <p style="margin-top: 1.2rem; max-width: 720px; font-size: 1.1rem; color: var(--muted); line-height: 1.8;">
+    I build data-driven systems that unlock insights and power decision-making. With a background in backend engineering and a passion for analytics, I help transform data into solutions that scale.
   </p>
+  <a href="#projects" class="download-btn" style="margin-top: 2rem;">View My Projects ↓</a>
 </div>
+
 
 
 <div class="container" id="about" data-animate>
@@ -117,7 +119,7 @@ Always learning, always improving—I stay ahead of the curve in the ever-evolvi
       <div class="timeline-dot"></div>
       <div class="timeline-content">
         <h2>Genefied Brand Protection Solutions - Data Analyst Intern</h2>
-        <span class="timeline-date">2023</span>
+        <span class="timeline-date">June 2022 - Aug 2022</span>
         <p>• <strong>Dashboard Development & Data Visualization:</strong> Designed interactive dashboards for client presentations using Power BI and Google Analytics to support data-driven decision-making.</p>
 
         <p>• <strong>Client Engagement & Data Solutions:</strong> Met with clients, including BookMyShow and KEI Industries, to present data-driven insights and recommend strategic solutions.</p>
@@ -170,6 +172,5 @@ Always learning, always improving—I stay ahead of the curve in the ever-evolvi
 
   document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
 </script>
-
 </body>
 </html>
