@@ -21,6 +21,7 @@
     <!-- <li><a href="#skills">Skills</a></li> -->
     <li><a href="#projects">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#volunteering">Certications</a></li>
     <li><a href="#resume">Resume</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -63,7 +64,7 @@
   </div>
 </div> -->
 
-<div class="container" id="projects">
+<div class="container" id="projects" data-animate>
   <h1>Projects</h1>
   <div class="project-grid">
     <div class="project-card"><h2>QwiKart</h2><p>Just-In-Time e-commerce platform with near 100% fulfillment.</p><a href="https://github.com/SiddheshCodeMaster/Qwikart" target="_blank">GitHub →</a></div>
@@ -138,10 +139,53 @@
   </div>
 </div>
 
-<div class="container" id="resume">
+<div class="container" id="volunteering" data-animate>
+  <h1>Volunteering & Certifications</h1>
+  <div class="vol-cert-grid">
+    <div class="vol-cert-card">
+      <h3>Oracle Volunteering (OV)</h3>
+      <p>Volunteered in diverse initiatives including organizing a blood donation camp with Hiranandani Hospital, designing physics learning aids for SSC students to simplify concepts, and participating in a beach cleanup drive that removed over 350 kg of plastic waste—demonstrating commitment to community health, education, and the environment.</p>
+    </div>
+    <div class="vol-cert-card">
+      <h3>The Data Scientist Toolbox</h3>
+      <p><strong>Issued by:</strong> John Hopkins University <strong></strong></p>
+      <p><Strong>Issue Date:</strong> April 2024</p>
+      <p>Completed Course   covering SQL, R, dashboarding, data cleaning, and business communication via data.</p>
+      <a href="https://coursera.org/share/7fe9fccfa87ae548ea8380f01ae53021" target="_blank">View Credential →</a>
+    </div>
+    <div class="vol-cert-card">
+      <h3>Python for Data Science & AI</h3>
+      <p><strong>Issued by:</strong> IBM <strong></strong></p>
+      <p><Strong>Issue Date:</strong> April 2021 </p>
+      <p>Completed a hands-on Python course covering data types, control flow, functions, OOP, 
+        and file handling. Gained practical experience with NumPy, Pandas, APIs, and web scraping using BeautifulSoup. 
+        Built real-world projects in Jupyter Notebooks aligned with Data Science and Automation tasks.</p>
+      <a href="https://www.credly.com/badges/1d029240-3d11-43e5-9f01-1525b98a34ad?source=linked_in_profile" target="_blank">View Credential →</a>
+    </div>
+    <div class="vol-cert-card">
+      <h3>Using Databases with Python</h3>
+      <p><strong>Issued by:</strong> University of Michigan <strong></strong></p>
+      <p><Strong>Issue Date:</strong> December 2020 </p>
+      <p>Completed a course on SQL and database design using SQLite3, focusing on multi-step data gathering and processing. 
+        Built web crawlers and visualized data using D3.js. 
+        Strengthened skills in Python 3 through hands-on projects aligned with real-world data workflows.</p>
+      <a href="https://coursera.org/verify/762ZWHPRMNH5" target="_blank">View Credential →</a>
+    </div>
+    <div class="vol-cert-card">
+      <h3>Software processes and Agile Practices</h3>
+      <p><strong>Issued by:</strong> University of Alberta <strong></strong></p>
+      <p><Strong>Issue Date:</strong> December 2020 </p>
+      <p>Gained knowledge of various software development process models and their applicability to real-world projects.
+        Learned to evaluate and choose appropriate models based on project context. 
+        Applied Agile principles and project management practices in software development scenarios.</p>
+      <a href="https://coursera.org/verify/GX4MEGDR85EN" target="_blank">View Credential →</a>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="resume" style="align-items: center; text-align: center;">
   <h1>Resume</h1>
-  <iframe src="{{ url_for('static', filename='resume/Siddhesh Shankar - Data Scientist.pdf') }}" width="100%" height="600px" style="border: none;"></iframe>
-  <a href="{{ url_for('static', filename='resume/Siddhesh Shankar - Data Scientist.pdf') }}" download class="download-btn">Download Resume</a>
+  <a href="{{ url_for('static', filename='resume/Siddhesh_Shankar_Resume.pdf') }}" download class="download-btn">📄 Download Resume</a>
 </div>
 
 <div class="container" id="contact">
@@ -176,6 +220,16 @@
   }, { threshold: 0.1 });
 
   document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+  window.addEventListener('load', function () {
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+      history.replaceState(null, null, window.location.pathname);
+    }, 100);
+  });
+
+  function showResume() {
+    document.getElementById('resume-frame').style.display = 'block';
+  }
 </script>
 </body>
 </html>

@@ -42,22 +42,6 @@ body.dark {
   text-align: left;
 }
 
-.logo {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: var(--primary);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.logo img {
-  width: 24px;
-  height: 24px;
-  vertical-align: middle;
-}
-
-
 /* Section Divider */
 .section-divider {
   width: 100%;
@@ -108,6 +92,15 @@ p {
   font-size: 1.2rem;
   font-weight: bold;
   color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
 }
 
 .nav-links {
@@ -176,91 +169,75 @@ p {
 }
 
 /* Projects */
-
-/* ...existing code... */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
-  align-items: stretch;
-  justify-items: center;
   width: 100%;
-  margin: 0 auto;
-  max-width: 1200px; /* Optional: limits grid width for large screens */
-  background: var(--bg);
-}
-.project-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-  padding: 2rem 1.2rem;
-  min-width: 260px;
-  max-width: 340px;
-  width: 100%;
-  text-align: left;
-  transition: box-shadow 0.2s;
-  background: var(--light); /* Uses light/dark variable */
-  color: var(--text); 
-}
-.project-card:hover {
-  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
 }
 
-.project-card h2 {
+.project-card {
+  background-color: var(--light);
+  border: none;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px var(--shadow);
+}
+
+.project-card h3 {
   margin-top: 0;
   color: var(--primary);
-  color: var(--text); 
+  font-size: 1.2rem;
 }
 
 .project-card p {
   color: var(--text);
+  font-size: 0.95rem;
 }
 
 .project-card a {
   display: inline-block;
-  margin-top: 1rem;
+  margin-top: 0.8rem;
   color: var(--primary);
   text-decoration: none;
   font-weight: 600;
-  color: var(--text); 
 }
 
-/* Timeline */
-.timeline {
-  border-left: 3px solid var(--primary);
-  padding-left: 20px;
-  margin-top: 2rem;
+/* Volunteering & Certifications */
+.vol-cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
 }
 
-.timeline-item {
-  position: relative;
-  margin-bottom: 2rem;
+.vol-cert-card {
+  background-color: var(--light);
+  border: none;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.timeline-dot {
-  position: absolute;
-  left: -10px;
-  top: 0;
-  width: 14px;
-  height: 14px;
-  background-color: var(--primary);
-  border-radius: 50%;
+.vol-cert-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px var(--shadow);
 }
 
-.timeline-content {
-  padding-left: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+.vol-cert-card h3 {
+  margin-top: 0;
+  color: var(--primary);
+  font-size: 1.2rem;
 }
 
-.timeline-date {
-  font-size: 0.85rem;
-  color: var(--muted);
-}
-
-.timeline-content p {
+.vol-cert-card p {
   color: var(--text);
   font-size: 0.95rem;
 }
@@ -273,11 +250,10 @@ p {
   border: none;
   border-radius: 30px;
   text-decoration: none;
-  text-align: center;
   font-weight: 600;
   font-size: 0.95rem;
-  display: block;
-  margin: 1rem auto 0 auto;
+  display: inline-block;
+  margin-top: 1rem;
   transition: background-color 0.3s ease;
 }
 
@@ -318,7 +294,6 @@ p {
   background-color: var(--accent);
 }
 
-/* Footer */
 .footer {
   text-align: center;
   padding: 1.5rem;
