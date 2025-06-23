@@ -11,6 +11,7 @@ body, html {
 
 :root {
   --bg: #f9f9f9;
+  --hero-bg: #ffffff;           /* <--- New Variable for Hero BG */
   --text: #212529;
   --primary: #0d6efd;
   --accent: #0b5ed7;
@@ -22,6 +23,7 @@ body, html {
 
 body.dark {
   --bg: #121212;
+  --hero-bg: #1a1a1a;         /* <--- Switches hero section in dark mode */
   --text: #f1f3f5;
   --primary: #0dcaf0;
   --accent: #00b5d4;
@@ -40,7 +42,65 @@ body.dark {
   gap: 2rem;
   align-items: flex-start;
   text-align: left;
+  background: var(--bg);
 }
+
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--bg);
+  /*background: var(--hero-bg); */  /* This will switch with dark mode */
+  padding: 4rem 1rem;
+  transition: background 0.3s ease-in-out;
+}
+
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 720px;
+  animation: fadeUp 1.2s ease-out forwards;
+}
+
+.hero-content h1 {
+  font-size: 2.6rem;
+  margin-top: 1.2rem;
+  color: var(--primary);
+}
+
+.hero-tagline {
+  font-size: 1.1rem;
+  max-width: 680px;
+  color: var(--muted);
+  margin-top: 1rem;
+  line-height: 1.8;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.fade-in:nth-child(1) { animation-delay: 0.2s; }
+.fade-in:nth-child(2) { animation-delay: 0.4s; }
+.fade-in:nth-child(3) { animation-delay: 0.6s; }
+.fade-in:nth-child(4) { animation-delay: 0.8s; }
+
 
 /* Section Divider */
 .section-divider {
@@ -210,6 +270,7 @@ p {
 }
 
 /* TimeLine --> EXPERIENCE */
+
 .timeline {
   position: relative;
   border-left: 3px solid var(--primary);
@@ -259,7 +320,6 @@ p {
   line-height: 1.6;
   text-align: left;
 }
-
 
 /* Volunteering & Certifications */
 .vol-cert-grid {

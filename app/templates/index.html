@@ -27,28 +27,41 @@
   </ul>
 </nav>
 
-<div class="container" id="home" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 8rem 1rem;">
-  <img src="{{ url_for('static', filename='images/about_me.jpeg') }}" alt="Siddhesh" class="profile-pic">
-  <h1 style="margin-top: 1.2rem; font-size: 2.5rem; align-items: center; justify-content: center; text-align: center;">👋 Hi, I'm Siddhesh Shankar</h1>
-  <p class="subtitle" style="margin-top: 0.5rem;">Aspiring Data Scientist | Backend Engineer | Data Insight Seeker</p>
-  <p style="margin-top: 1.2rem; max-width: 720px; font-size: 1.1rem; color: var(--muted); line-height: 1.8;">
-    I build data-driven systems that unlock insights and power decision-making. With a background in backend engineering and a passion for analytics, I help transform data into solutions that scale.
-  </p>
-  <a href="#projects" class="download-btn" style="margin-top: 2rem;">View My Projects ↓</a>
-</div>
-
+<!-- style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 8rem 1rem; -->
+<section class="hero-section" id="home" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 8rem 1rem;">
+  <div class="hero-content">
+    <img src="{{ url_for('static', filename='images/about_me.jpeg') }}" class="profile-pic" alt="Siddhesh">
+    <h1 class="fade-in">👋 Hi, I'm Siddhesh Shankar</h1>
+    <p class="subtitle fade-in">Aspiring Data Scientist · Backend Engineer · Tech Explorer</p>
+    <p class="hero-tagline fade-in">
+      I build data-powered systems that unlock insights and drive smart decisions.
+    </p>
+    <a href="#projects" class="download-btn fade-in">View My Work ↓</a>
+  </div>
+</section>
 
 
 <div class="container" id="about" data-animate>
   <h1>About Me</h1>
+  <section class="about-text">
   <p>
-    I'm a data-driven dreamer with a caffeine-fueled passion for data science, backend logic, and lifelong learning. Whether it's crunching numbers, decoding patterns, or debugging one-liners at 2 AM — I'm all in for the thrill of the tech chase. 🚀
+    I'm a <strong>data-driven dreamer</strong> with a caffeine-fueled passion for <strong>data science</strong>, <strong>backend logic</strong>, and <strong>lifelong learning</strong>. Whether it’s crunching numbers, decoding patterns, or debugging one-liners at 2 AM — I’m all in for the thrill of the tech chase. 🚀
+  </p>
+  
+  <p>
+    <strong>📊 Data tells stories</strong>, and I’m here to be the translator. From building ML models that actually behave 🤖 to visualizing insights that make you go “Whoa!” — I’m obsessed with turning <em>raw data into real-world impact</em>. Whether it’s a solo Kaggle challenge or a high-energy group project, I bring both <strong>curiosity</strong> and <strong>collaboration</strong> to the table.
+  </p>
 
-    📊 I believe data tells stories, and I'm here to be the translator. From building ML models that actually behave 🤖 to visualizing insights that make you go “Whoa!” — I'm obsessed with turning raw data into real-world impact. Whether it's a solo Kaggle challenge or a high-energy group project, I bring both curiosity and collaboration to the table.
+  <p>
+    <strong>🗄️ Databases?</strong> I’m all in. Be it <em>MongoDB, MySQL, or even a humble .csv</em>, I thrive on diving into structured chaos and surfacing with optimized order. I’ve worked with messy datasets, trained predictive models, and shared my findings through <em>technical blogs</em> to keep the learning ecosystem alive.
+  </p>
 
-    🗄️ Databases? Oh, I love those. Be it MongoDB, MySQL, or just a humble .csv, I enjoy diving into structured chaos and coming out with optimized order. I've used machine learning on all sorts of datasets (yes, some were messy — but hey, that's half the fun!), and I regularly share my findings in technical blogs to keep the knowledge flowing.
+  <p>
+    🎓 I hold a <strong>B.Tech in Computer Science</strong> with <strong>Honors in Data Science</strong> from <em>Symbiosis Institute of Technology, Pune</em> — proudly wearing both hats: <strong>engineer</strong> & <strong>data whisperer</strong>. <br> <strong>By day</strong>, I’m an Associate Consultant at Oracle Financial Services; <strong>by night</strong>, you’ll find me exploring graph databases, wrangling DOM elements, or diving into football stats. ⚽
+  </p>
+</section>
 
-    🎓 I hold a B.Tech in Computer Science with Honors in Data Science from Symbiosis Institute of Technology, Pune — proudly wearing both hats: engineer & data whisperer. By day, I’m an Associate Consultant at Oracle Financial Services Software, and by night, you'll find me exploring Graph Databases, wrangling DOM elements with JavaScript, or just enjoying a good football stat.</p>
+   
 </div>
 
 <!-- <div class="container" id="skills">
