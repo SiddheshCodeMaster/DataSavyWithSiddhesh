@@ -343,7 +343,10 @@ p {
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.05);
   transition: transform 0.3s, box-shadow 0.3s;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .vol-cert-card:hover {
@@ -375,10 +378,22 @@ p {
   color: var(--accent);
 }
 
+.issuer-logo {
+  width: 100%;
+  max-width: 160px;         /* Limits it on large screens */
+  height: 80px;             /* Gives height without distortion */
+  object-fit: contain;
+  display: block;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: white;  /* Optional, good for contrast */
+  border-radius: 8px;
+}
+
 /* Resume */
 .download-btn {
   background-color: var(--primary);
-  color: #fff;
+  color: #fff; 
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 30px;
