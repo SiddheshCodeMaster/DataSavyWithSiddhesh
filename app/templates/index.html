@@ -28,7 +28,7 @@
 </nav>
 
 <!-- style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 8rem 1rem; -->
-<section class="hero-section" id="home" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 8rem 1rem;">
+<section class="hero-section" id="home" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
   <div class="hero-content">
     <img src="{{ url_for('static', filename='images/about_me.jpeg') }}" class="profile-pic" alt="Siddhesh">
     <h1 class="fade-in">👋 Hi, I'm Siddhesh Shankar</h1>
@@ -41,8 +41,8 @@
 </section>
 
 
-<div class="container" id="about" data-animate>
-  <h1>About Me</h1>
+<div class="container" id="about" data-animate >
+  <h1 style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">About Me</h1>
   <section class="about-text">
   <p>
     I'm a <strong>data-driven dreamer</strong> with a caffeine-fueled passion for <strong>data science</strong>, <strong>backend logic</strong>, and <strong>lifelong learning</strong>. Whether it’s crunching numbers, decoding patterns, or debugging one-liners at 2 AM — I’m all in for the thrill of the tech chase. 🚀
@@ -78,7 +78,7 @@
 </div> -->
 
 <div class="container" id="projects" data-animate>
-  <h1>Projects</h1>
+  <h1 style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">Projects</h1>
   <div class="project-grid">
     <div class="project-card"><h2>QwiKart</h2><p>Just-In-Time e-commerce platform with near 100% fulfillment.</p><a href="https://github.com/SiddheshCodeMaster/Qwikart" target="_blank">GitHub →</a></div>
     <div class="project-card"><h2>AGanTCAM</h2><p>Alzheimer detection using Vision Transformers and Grad-CAM.</p><a href="https://github.com/SiddheshCodeMaster/Alzheimer_detection_using_Vision_Transformer" target="_blank">GitHub →</a></div>
@@ -89,7 +89,7 @@
 </div>
 
 <div class="container" id="experience">
-  <h1>Experience</h1>
+  <h1 style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">Experience</h1>
   <div class="timeline">
     <div class="timeline-item">
       <div class="timeline-dot"></div>
@@ -153,7 +153,7 @@
 </div>
 
 <div class="container" id="volunteering" data-animate>
-  <h1>Volunteering & Certifications</h1>
+  <h1 style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">Volunteering & Certifications</h1>
   <div class="vol-cert-grid">
     <div class="vol-cert-card">
       <h3>Oracle Volunteering (OV)</h3>
@@ -197,12 +197,12 @@
 </div>
 
 <div class="container" id="resume" style="align-items: center; text-align: center;">
-  <h1>Resume</h1>
+  <h1 style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">Resume</h1>
   <a href="{{ url_for('static', filename='resume/Siddhesh_Shankar_Resume.pdf') }}" download class="download-btn">📄 Download Resume</a>
 </div>
 
 <div class="container" id="contact">
-  <h1>Contact Me</h1>
+  <h1 style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">Contact Me</h1>
   <form action="https://formspree.io/f/xwpbnoaw" method="POST" class="contact-form">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="_replyto" placeholder="Your Email" required>
