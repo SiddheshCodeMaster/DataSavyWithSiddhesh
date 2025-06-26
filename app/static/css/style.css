@@ -347,6 +347,41 @@ p {
   margin-left: 0;
 }
 
+.minimal-exp {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 1rem;
+}
+
+.exp-logo-minimal {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: white;
+  padding: 0.3rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.minimal-exp .exp-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.minimal-exp .exp-text h2 {
+  font-size: 1.05rem;
+  margin: 0;
+  color: var(--primary);
+}
+
+.minimal-exp .exp-text .timeline-date {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+
 /* Volunteering & Certifications */
 .vol-cert-grid {
   display: grid;
