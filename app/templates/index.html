@@ -25,7 +25,8 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#blogs">Blogs & Activities</a></li>
       <li><a href="#volunteering">Certifications</a></li>
-      <li><a href="#resume">Resume</a></li>
+      <li><a href="{{ url_for('static', filename='resume/Siddhesh_Shankar_Resume.pdf') }}" 
+          download>Resume</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -326,13 +327,13 @@
     </div>
   </div>
 
-  <div class="container" id="resume" style="align-items: center; text-align: center;">
+  <!-- <div class="container" id="resume" style="align-items: center; text-align: center;">
     <h1
       style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
       Resume</h1>
     <a href="{{ url_for('static', filename='resume/Siddhesh_Shankar_Resume.pdf') }}" download class="download-btn">📄
       Download Resume</a>
-  </div>
+  </div> -->
 
   <div class="container" id="contact">
     <h1
