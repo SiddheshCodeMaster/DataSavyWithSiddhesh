@@ -1,44 +1,48 @@
-from flask import Flask, render_template
-import os
+from flask import Flask, jsonify, render_template
+import feedparser
+from bs4 import BeautifulSoup
 
 app = Flask(__name__, template_folder='app/templates', static_folder='app/static')
+
+MEDIUM_FEED_URL = "https://medium.com/feed/@siddhesh.codemaster.github"
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
-# @app.route('/about')
-# def about():
-#     return render_template('about.html')
+@app.route("/api/medium/blogs")
+def api_medium_blogs():
+    feed = feedparser.parse(MEDIUM_FEED_URL)
+    blogs = []
 
-# @app.route('/projects')
-# def projects():
-#     return render_template('projects.html')
+    for entry in feed.entries:
+        # STEP 1: Try media_thumbnail
+        thumbnail = None
+        if "media_thumbnail" in entry:
+            thumbnail = entry.media_thumbnail[0]["url"]
 
-# @app.route('/skills')
-# def skills():
-#     skill_data = {
-#         "Python": 80,
-#         "SQL": 85,
-#         "Java": 75,
-#         "JavaScript": 70,
-#         "Oracle DB": 80,
-#         "Data Analysis": 80,
-#         "Machine Learning": 65
-#     }
-#     return render_template('skills.html', skills=skill_data)
+        # STEP 2: Try enclosure images
+        if not thumbnail and "links" in entry:
+            for link in entry.links:
+                if link.get("rel") == "enclosure":
+                    thumbnail = link.get("href")
 
-# @app.route('/experience')
-# def experience():
-#     return render_template('experience.html')
+        # STEP 3: Extract <img> from HTML content (MOST ACCURATE)
+        if not thumbnail and "content" in entry:
+            soup = BeautifulSoup(entry.content[0].value, "html.parser")
+            img = soup.find("img")
+            if img:
+                thumbnail = img.get("src")
 
-# @app.route('/resume')
-# def resume():
-#     return render_template('resume.html')
+        blogs.append({
+            "title": entry.title,
+            "link": entry.link,
+            "published": entry.published if hasattr(entry, "published") else "",
+            "summary": entry.summary if hasattr(entry, "summary") else "",
+            "thumbnail": thumbnail
+        })
 
-# @app.route('/contact')
-# def contact():
-#     return render_template('contact.html')
+    return jsonify({"blogs": blogs})
 
 if __name__ == '__main__':
     app.run(debug=True)
