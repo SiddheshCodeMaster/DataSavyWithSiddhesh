@@ -25,25 +25,38 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#blogs">Blogs & Activities</a></li>
       <li><a href="#volunteering">Certifications</a></li>
-      <li><a href="{{ url_for('static', filename='resume/Siddhesh_Shankar_Resume.pdf') }}" 
-          download>Resume</a></li>
+      <li><a href="{{ url_for('static', filename='resume/Siddhesh_Shankar_Resume.pdf') }}" download>Resume</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 8rem 1rem; -->
-  <section class="hero-section" id="home"
-    style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-    <div class="hero-content">
-      <img src="{{ url_for('static', filename='images/about_me.jpeg') }}" class="profile-pic" alt="Siddhesh">
-      <h1 class="fade-in">👋 Hi, I'm Siddhesh Shankar</h1>
-      <p class="subtitle fade-in">Aspiring Data Scientist · Backend Engineer · Tech Explorer</p>
-      <p class="hero-tagline fade-in">
-        <strong>I turn data into clarity and code into scalable systems. With a strong foundation in backend development
-          and a passion for analytics, I build solutions that are smart, fast, and impactful.</strong>
-      </p>
-      <a href="#projects" class="download-btn fade-in">View My Work ↓</a>
+  <section class="hero-section" id="home">
+
+    <div class="hero-wrapper">
+
+      <!-- LEFT SIDE: Profile + text -->
+      <div class="hero-left">
+        <img src="{{ url_for('static', filename='images/about_me.jpeg') }}" class="profile-pic" alt="Siddhesh">
+
+        <h1 class="fade-in">👋 Hi, I'm Siddhesh Shankar</h1>
+        <p class="subtitle fade-in">Aspiring Data Scientist · Backend Engineer · Tech Explorer</p>
+
+        <p class="hero-tagline fade-in">
+          <strong>I turn data into clarity and code into scalable systems. With a strong foundation in backend
+            development
+            and a passion for analytics, I build solutions that are smart, fast, and impactful.</strong>
+        </p>
+
+        <a href="#projects" class="download-btn fade-in">View My Work ↓</a>
+      </div>
+
+      <!-- RIGHT SIDE: Lottie animation -->
+      <div class="hero-right">
+        <div id="lottie-animation"></div>
+      </div>
+
     </div>
+
   </section>
 
 
@@ -82,19 +95,6 @@
 
 
   </div>
-
-  <!-- <div class="container" id="skills">
-  <h1>Skills</h1>
-  <div class="skills-section">
-    <div class="skill"><div class="skill-name">Python</div><div class="skill-bar"><div class="skill-fill" style="width: 80%;">80%</div></div></div>
-    <div class="skill"><div class="skill-name">SQL</div><div class="skill-bar"><div class="skill-fill" style="width: 85%;">85%</div></div></div>
-    <div class="skill"><div class="skill-name">Java</div><div class="skill-bar"><div class="skill-fill" style="width: 75%;">75%</div></div></div>
-    <div class="skill"><div class="skill-name">JavaScript</div><div class="skill-bar"><div class="skill-fill" style="width: 70%;">70%</div></div></div>
-    <div class="skill"><div class="skill-name">Oracle DB</div><div class="skill-bar"><div class="skill-fill" style="width: 80%;">80%</div></div></div>
-    <div class="skill"><div class="skill-name">Data Analysis</div><div class="skill-bar"><div class="skill-fill" style="width: 80%;">80%</div></div></div>
-    <div class="skill"><div class="skill-name">Machine Learning</div><div class="skill-bar"><div class="skill-fill" style="width: 65%;">65%</div></div></div>
-  </div>
-</div> -->
 
   <div class="container" id="projects" data-animate>
     <h1
@@ -327,14 +327,6 @@
     </div>
   </div>
 
-  <!-- <div class="container" id="resume" style="align-items: center; text-align: center;">
-    <h1
-      style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-      Resume</h1>
-    <a href="{{ url_for('static', filename='resume/Siddhesh_Shankar_Resume.pdf') }}" download class="download-btn">📄
-      Download Resume</a>
-  </div> -->
-
   <div class="container" id="contact">
     <h1
       style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
@@ -380,6 +372,20 @@
       document.getElementById('resume-frame').style.display = 'block';
     }
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.1/lottie.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      lottie.loadAnimation({
+        container: document.getElementById('lottie-animation'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: "{{ url_for('static', filename='lottie/analytics.json') }}"
+      });
+    });
+  </script>
+
 </body>
 
 </html>
