@@ -1,416 +1,843 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <meta name="google-site-verification" content="R3cZsFlx9JPUZM-FGLHV82VRPhVRyqNtRCttFHsDSTo" /> -->
-  <title>DataSavyWithSiddhesh</title>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZCS4BR0LB"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-HZCS4BR0LB');
-  </script>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  <link rel="icon" href="{{ url_for('static', filename='images/icon.png') }}" type="image/x-icon">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Siddhesh Shankar · Data Scientist</title>
+   <link rel="icon" href="{{ url_for('static', filename='images/icon.png') }}" type="image/x-icon">
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
 <body>
 
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="logo">
-      <img src="{{ url_for('static', filename='images/Logo.png') }}" alt="Logo">
+<!-- ═══════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+   <a href="#home" class="nav-logo">
+      <span class="logo-mark">
+         <img src="static/images/Logo.png">
+      </span>
       DataSavyWithSiddhesh
-    </div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
+   </a>
+   <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <!-- <li><a href="#skills">Skills</a></li> -->
+      <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
-      <li><a href="#blogs">Blogs & Activities</a></li>
-      <li><a href="#volunteering">Certifications</a></li>
-      <li><a href="{{ url_for('static', filename='resume/Siddhesh_Shankar_Resume.pdf') }}" download>Resume</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#blogs">Writing</a></li>
       <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+      <li>
+         <a href="{{ url_for('static', filename='resume/Siddhesh_Shankar_Resume.pdf') }}"
+            download class="nav-cta">Resume ↓</a>
+      </li>
+   </ul>
+</nav>
 
-  <section class="hero-section" id="home">
+<!-- ═══════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<div id="home">
+   <div class="hero-section">
 
-    <div class="hero-wrapper">
-
-      <!-- LEFT SIDE: Profile + text -->
+      <!-- Left: headline — each child staggers in on load -->
       <div class="hero-left">
-        <img src="{{ url_for('static', filename='images/about_me.jpeg') }}" class="profile-pic" alt="Siddhesh">
-
-        <h1 class="fade-in">👋 Hi, I'm Siddhesh Shankar</h1>
-        <p class="subtitle fade-in">Aspiring Data Scientist · Backend Engineer · Tech Explorer</p>
-
-        <p class="hero-tagline fade-in">
-          <strong>I turn data into clarity and code into scalable systems. With a strong foundation in backend
-            development
-            and a passion for analytics, I build solutions that are smart, fast, and impactful.</strong>
-        </p>
-
-        <a href="#projects" class="download-btn fade-in">View My Work ↓</a>
+         <div class="hero-eyebrow hero-animate">
+            <div class="hero-eyebrow-dot"></div>
+            <span class="hero-eyebrow-text">Open to Full-Time Opportunities</span>
+         </div>
+         <h1 class="hero-name hero-animate">Siddhesh<br>Shankar</h1>
+         <p class="hero-role hero-animate">Data Scientist<br>& Product Analyst</p>
+         <p class="hero-desc hero-animate">
+            Turning data into clarity and code into scalable systems.
+            I build solutions that are smart, fast, and impactful —
+            from production ML pipelines to agentic AI applications.
+         </p>
+         <div class="hero-actions hero-animate">
+            <a href="#projects" class="btn-primary">View My Work →</a>
+            <a href="#contact" class="btn-ghost">Let's talk <i class="fa-solid fa-arrow-right" style="font-size:10px;"></i></a>
+         </div>
       </div>
 
-      <!-- RIGHT SIDE: Lottie animation -->
-      <div class="hero-right">
-        <div id="lottie-animation"></div>
+      <!-- Right: stat card grid -->
+      <div class="hero-right hero-animate" style="animation-delay:0.55s;">
+
+         <!-- Profile banner -->
+         <div class="profile-card">
+            <img src="{{ url_for('static', filename='images/about_me.jpeg') }}" alt="Siddhesh Shankar">
+            <div class="profile-card-info">
+               <div class="profile-card-name">Siddhesh Shankar</div>
+               <div class="profile-card-role">Product Analyst · Ex-Oracle</div>
+            </div>
+            <div class="status-pill">
+               <div class="status-dot"></div>
+               Available
+            </div>
+         </div>
+
+         <!-- Stats -->
+         <div class="stat-card">
+            <div class="stat-num">MS</div>
+            <div class="stat-label">UIUC · Fall 2026</div>
+         </div>
+         <div class="stat-card">
+            <div class="stat-num">2+</div>
+            <div class="stat-label">Years at Oracle Financial Services</div>
+         </div>
+         <!-- <div class="stat-card">
+            <div class="stat-num">9+</div>
+            <div class="stat-label">Open Source Projects</div>
+         </div> -->
+         <div class="stat-card accent-card">
+            <div class="stat-icon">⚽</div>
+            <div class="stat-num" style="font-size:26px; margin-bottom:4px;">Gold &<br>Silver</div>
+            <div class="stat-label">Tournament Medal · Goalkeeper</div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════
+     ABOUT
+════════════════════════════════════════ -->
+<div class="section reveal" id="about" data-animate>
+   <div class="section-label">About</div>
+   <div class="about-grid">
+
+      <!-- Photo col -->
+      <div class="about-left">
+         <img src="{{ url_for('static', filename='images/about_me.jpeg') }}"
+              alt="Siddhesh Shankar" class="about-photo">
+         <div class="about-socials">
+            <a href="https://linkedin.com/in/siddheshshankar" target="_blank">
+               <i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/SiddheshCodeMaster" target="_blank">
+               <i class="fa-brands fa-github"></i></a>
+            <a href="https://medium.com/@siddhesh.codemaster.github" target="_blank">
+               <i class="fa-brands fa-medium"></i></a>
+            <a href="mailto:shankarsiddhesh1606@gmail.com">
+               <i class="fa-solid fa-envelope"></i></a>
+         </div>
       </div>
 
-    </div>
-
-  </section>
-
-
-  <div class="container" id="about" data-animate>
-    <h1
-      style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-      About Me</h1>
-    <section class="about-text">
-      <p>
-        I'm a <strong>data-driven dreamer</strong> with a caffeine-fueled passion for <strong>data science</strong>,
-        <strong>backend logic</strong>, and <strong>lifelong learning</strong>. Whether it’s crunching numbers, decoding
-        patterns, or debugging one-liners at 2 AM — I’m all in for the thrill of the tech chase. 🚀
-      </p>
-
-      <p>
-        <strong>📊 Data tells stories</strong>, and I’m here to be the translator. From building ML models that actually
-        behave 🤖 to visualizing insights that make you go “Whoa!” — I’m obsessed with turning <em>raw data into
-          real-world impact</em>. Whether it’s a solo Kaggle challenge or a high-energy group project, I bring both
-        <strong>curiosity</strong> and <strong>collaboration</strong> to the table.
-      </p>
-
-      <p>
-        <strong>🗄️ Databases?</strong> I’m all in. Be it <em>MongoDB, MySQL, or even a humble .csv</em>, I thrive on
-        diving into structured chaos and surfacing with optimized order. I’ve worked with messy datasets, trained
-        predictive models, and shared my findings through <em>technical blogs</em> to keep the learning ecosystem alive.
-      </p>
-
-      <p>
-        🎓 I hold a <strong>B.Tech in Computer Science</strong> with <strong>Honors in Data Science</strong> from
-        <em>Symbiosis Institute of Technology, Pune</em> — proudly wearing both hats: <strong>engineer</strong> &
-        <strong>data whisperer</strong>. <br> <strong>By day</strong>, I’m an Associate Consultant at Oracle Financial
-        Services; <strong>by night</strong>, you’ll find me exploring graph databases, wrangling DOM elements, or diving
-        into football stats. ⚽
-      </p>
-    </section>
-
-
-  </div>
-
-  <div class="container" id="projects" data-animate>
-    <h1
-      style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-      Projects</h1>
-    <div class="project-grid">
-      <div class="project-card">
-        <h2>InfoGuard AI</h2>
-        <p>An AI-powered platform for real-time monitoring, risk scoring, and anomaly detection of Wikipedia content edits.</p>
-        <a href="https://github.com/SiddheshCodeMaster/InfoGuard-AI" target="_blank">GitHub →</a>
+      <!-- Text col -->
+      <div class="about-right">
+         <h2 class="section-title">Data-driven.<br>Backend-powered.</h2>
+         <div class="about-body">
+            <p>
+               I'm a <strong>data-driven builder</strong> with a caffeine-fueled passion for
+               <strong>data science</strong>, <strong>backend engineering</strong>, and
+               <strong>lifelong learning</strong>. Whether it's crunching numbers, decoding
+               patterns, or debugging pipelines at 2 AM — I'm all in for the thrill of the
+               tech chase. 🚀
+            </p>
+            <p>
+               <strong>Data tells stories</strong>, and I'm here to be the translator.
+               From building ML models that actually behave 🤖 to visualizing insights that
+               make stakeholders go "Whoa!" — I'm obsessed with turning
+               <em>raw data into real-world impact</em>.
+            </p>
+            <p>
+               I hold a <strong>B.Tech in Computer Science with Honors in Data Science</strong>
+               from Symbiosis Institute of Technology, Pune. By day I was an Associate
+               Consultant at Oracle Financial Services; now I'm heading to
+               <strong>UIUC</strong> for my MS in Information Management — Fall 2026.
+            </p>
+            <p>
+               Databases? All in. MongoDB, MySQL, PostgreSQL, or a humble .csv — I thrive
+               on surfacing optimized order from structured chaos. Off the terminal, you'll
+               catch me on the football pitch. ⚽
+            </p>
+         </div>
+         <div class="about-chips">
+            <span class="about-chip">Python</span>
+            <span class="about-chip">Machine Learning</span>
+            <span class="about-chip">Data Engineering</span>
+            <span class="about-chip">Flask / FastAPI</span>
+            <span class="about-chip">MongoDB</span>
+            <span class="about-chip">LLM Agents</span>
+            <span class="about-chip">Oracle DB</span>
+            <span class="about-chip">Streamlit</span>
+            <span class="about-chip">Docker</span>
+            <!-- <span class="about-chip">Football ⚽</span> -->
+         </div>
       </div>
-      <div class="project-card">
-        <h2>QwiKart</h2>
-        <p>Just-In-Time e-commerce platform with near 100% fulfillment.</p><a
-          href="https://github.com/SiddheshCodeMaster/Qwikart" target="_blank">GitHub →</a>
-      </div>
-      <div class="project-card">
-        <h2>AGanTCAM</h2>
-        <p>Alzheimer detection using Vision Transformers and Grad-CAM.</p><a
-          href="https://github.com/SiddheshCodeMaster/Alzheimer_detection_using_Vision_Transformer"
-          target="_blank">GitHub →</a>
-      </div>
-      <div class="project-card">
-        <h2>Fake News Classifier</h2>
-        <p>Deep learning NLP model to classify fake news articles.</p><a
-          href="https://github.com/SiddheshCodeMaster/Kaggle-Fake-News-Classifier-using-Deep-Learning"
-          target="_blank">GitHub →</a>
-      </div>
-      <div class="project-card">
-        <h2>IMDB Scraper</h2>
-        <p>Web scraper to collect movie data from IMDB using BeautifulSoup.</p><a
-          href="https://github.com/SiddheshCodeMaster/Web-Scrapping-IMDB-Website-Python" target="_blank">GitHub →</a>
-      </div>
-      <div class="project-card">
-        <h2>Selenium Scraper</h2>
-        <p>Dynamic web scraping using Selenium automation.</p><a
-          href="https://github.com/SiddheshCodeMaster/Web-Scraping-uisng-Selenium" target="_blank">GitHub →</a>
-      </div>
-    </div>
-  </div>
 
-  <div class="container" id="experience">
-    <h1
-      style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-      Experience</h1>
-    <div class="timeline">
+   </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════
+     SKILLS
+════════════════════════════════════════ -->
+<div class="section reveal" id="skills" data-animate>
+   <div class="section-label">Skills</div>
+   <h2 class="section-title">The Toolkit</h2>
+   <p class="section-subtitle">A full-stack data skill set — from model training to production deployment.</p>
+
+   <div class="skills-grid">
+
+      <div class="skill-category">
+         <h3 class="skill-title"><span class="skill-icon">💻</span> Languages</h3>
+         <div class="skill-tags">
+            <span>Python</span><span>R</span><span>JavaScript</span><span>SQL</span>
+         </div>
+      </div>
+
+      <div class="skill-category">
+         <h3 class="skill-title"><span class="skill-icon">📊</span> Data Science & ML</h3>
+         <div class="skill-tags">
+            <span>Pandas</span><span>NumPy</span><span>Scikit-Learn</span>
+            <span>TensorFlow</span><span>PyTorch</span><span>Matplotlib</span><span>Seaborn</span>
+         </div>
+      </div>
+
+      <div class="skill-category">
+         <h3 class="skill-title"><span class="skill-icon">⚙️</span> Data Engineering</h3>
+         <div class="skill-tags">
+            <span>ETL Pipelines</span><span>Data Warehousing</span>
+            <span>API Development</span><span>Stream Processing</span>
+         </div>
+      </div>
+
+      <div class="skill-category">
+         <h3 class="skill-title"><span class="skill-icon">🧠</span> Backend Development</h3>
+         <div class="skill-tags">
+            <span>Flask</span><span>FastAPI</span><span>REST APIs</span><span>Microservices</span>
+         </div>
+      </div>
+
+      <div class="skill-category">
+         <h3 class="skill-title"><span class="skill-icon">🗄️</span> Databases</h3>
+         <div class="skill-tags">
+            <span>MySQL</span><span>MongoDB</span><span>PostgreSQL</span><span>Oracle DB</span>
+         </div>
+      </div>
+
+      <div class="skill-category">
+         <h3 class="skill-title"><span class="skill-icon">☁️</span> Tools & Cloud</h3>
+         <div class="skill-tags">
+            <span>Git</span><span>Docker</span><span>Linux</span><span>Streamlit</span>
+         </div>
+      </div>
+
+   </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════
+     PROJECTS
+════════════════════════════════════════ -->
+<div class="section reveal" id="projects" data-animate>
+   <div class="section-label">Projects</div>
+   <h2 class="section-title">Selected Work</h2>
+   <p class="section-subtitle">Data Science, Agentic AI, and Engineering projects built for real-world impact.</p>
+
+   <div class="project-tabs">
+      <button class="tab-btn active" onclick="filterProjects('ai-ml', this)">AI / ML</button>
+      <button class="tab-btn" onclick="filterProjects('agentic-ai', this)">Agentic AI</button>
+      <button class="tab-btn" onclick="filterProjects('data-analysis', this)">Data Analysis</button>
+      <button class="tab-btn" onclick="filterProjects('data-engineering', this)">Data Engineering</button>
+   </div>
+
+   <div class="project-grid">
+
+      <!-- Autonomous Data-Analyst -->
+      <div class="project-card" data-category="agentic-ai">
+         <div class="project-accent-bar bar-teal"></div>
+         <span class="project-kpis">
+            <span class="project-kpi">Statistical Analysis</span>
+            <span class="project-kpi">Lite LLMs</span>
+         </span>
+         <h2>Autonomous Data-Analyst</h2>
+         <p>Multi-agent AI pipeline (Data Cleaning, EDA, Insight, Report agents) automating end-to-end data analysis, reducing manual effort by ~70%.</p>
+         <div class="project-tech">
+            <span>Python</span><span>LLM Agents</span><span>FastAPI</span><span>Streamlit</span>
+         </div>
+         <div class="project-footer">
+            <a href="https://github.com/SiddheshCodeMaster/autonomous-data-analyst.git" target="_blank">View on GitHub →</a>
+            <span>Agentic AI</span>
+         </div>
+      </div>
+
+      <!-- InfoGuard AI -->
+      <div class="project-card" data-category="ai-ml">
+         <div class="project-accent-bar bar-teal"></div>
+         <span class="project-kpis">
+            <span class="project-kpi">Real-time Monitoring</span>
+            <span class="project-kpi">AI Risk Scoring</span>
+         </span>
+         <h2>InfoGuard AI</h2>
+         <p>AI-powered platform monitoring Wikipedia edits with anomaly detection and real-time risk scoring pipelines.</p>
+         <div class="project-tech">
+            <span>Python</span><span>LLM Agents</span><span>FastAPI</span><span>MongoDB</span><span>Streamlit</span>
+         </div>
+         <div class="project-footer">
+            <a href="https://github.com/SiddheshCodeMaster/InfoGuard-AI" target="_blank">View on GitHub →</a>
+            <span>AI / ML</span>
+         </div>
+      </div>
+
+      <!-- QueryMind -->
+      <div class="project-card" data-category="data-analysis">
+         <div class="project-accent-bar bar-sky"></div>
+         <span class="project-kpis">
+            <span class="project-kpi">NL2SQL</span>
+            <span class="project-kpi">CLI Tool</span>
+         </span>
+         <h2>QueryMind</h2>
+         <p>Terminal-based AI Data Analyst — natural language interface for dataset exploration combining rule-based logic and local LLMs.</p>
+         <div class="project-tech">
+            <span>Python</span><span>LLM Agents</span><span>TUI CLI</span><span>Pandas</span>
+         </div>
+         <div class="project-footer">
+            <a href="https://github.com/SiddheshCodeMaster/QueryMind" target="_blank">View on GitHub →</a>
+            <span>Data Analysis</span>
+         </div>
+      </div>
+
+      <!-- QwiKart -->
+      <div class="project-card" data-category="data-engineering">
+         <div class="project-accent-bar bar-emerald"></div>
+         <span class="project-kpis">
+            <span class="project-kpi">Near-100% Fulfillment</span>
+            <span class="project-kpi">JIT Architecture</span>
+         </span>
+         <h2>QwiKart</h2>
+         <p>Just-in-time e-commerce platform with API-first architecture ensuring near 100% order fulfillment efficiency.</p>
+         <div class="project-tech">
+            <span>Python</span><span>Flask</span><span>REST APIs</span><span>MongoDB</span><span>Docker</span>
+         </div>
+         <div class="project-footer">
+            <a href="https://github.com/SiddheshCodeMaster/Qwikart" target="_blank">View on GitHub →</a>
+            <span>Data Engineering</span>
+         </div>
+      </div>
+
+      <!-- AGanTCAM -->
+      <div class="project-card" data-category="ai-ml">
+         <div class="project-accent-bar bar-indigo"></div>
+         <span class="project-kpis">
+            <span class="project-kpi">Vision Transformers</span>
+            <span class="project-kpi">Explainable AI</span>
+         </span>
+         <h2>AGanTCAM</h2>
+         <p>Alzheimer detection using Vision Transformers with Grad-CAM to visualize model attention and improve explainability.</p>
+         <div class="project-tech">
+            <span>Python</span><span>PyTorch</span><span>ViT</span><span>Grad-CAM</span>
+         </div>
+         <div class="project-footer">
+            <a href="https://github.com/SiddheshCodeMaster/Alzheimer_detection_using_Vision_Transformer" target="_blank">View on GitHub →</a>
+            <span>AI / ML</span>
+         </div>
+      </div>
+
+      <!-- Fake News -->
+      <div class="project-card" data-category="ai-ml">
+         <div class="project-accent-bar bar-rose"></div>
+         <span class="project-kpis">
+            <span class="project-kpi">NLP</span>
+            <span class="project-kpi">Deep Learning</span>
+         </span>
+         <h2>Fake News Classifier</h2>
+         <p>Deep learning NLP model classifying fake vs real news articles using large-scale text datasets.</p>
+         <div class="project-tech">
+            <span>Python</span><span>TensorFlow</span><span>NLP</span><span>Keras</span>
+         </div>
+         <div class="project-footer">
+            <a href="https://github.com/SiddheshCodeMaster/Kaggle-Fake-News-Classifier-using-Deep-Learning" target="_blank">View on GitHub →</a>
+            <span>AI / ML</span>
+         </div>
+      </div>
+
+      <!-- IMDB Scraper -->
+      <div class="project-card" data-category="data-analysis">
+         <div class="project-accent-bar bar-orange"></div>
+         <span class="project-kpis">
+            <span class="project-kpi">Web Scraping</span>
+            <span class="project-kpi">Data Collection</span>
+         </span>
+         <h2>IMDB Scraper</h2>
+         <p>Python web scraper extracting large-scale movie datasets from IMDB for downstream analysis and visualization.</p>
+         <div class="project-tech">
+            <span>Python</span><span>BeautifulSoup</span><span>Requests</span><span>Pandas</span>
+         </div>
+         <div class="project-footer">
+            <a href="https://github.com/SiddheshCodeMaster/Web-Scrapping-IMDB-Website-Python" target="_blank">View on GitHub →</a>
+            <span>Data Analysis</span>
+         </div>
+      </div>
+
+      <!-- Café Sales -->
+      <div class="project-card" data-category="data-analysis">
+         <div class="project-accent-bar bar-sky"></div>
+         <span class="project-kpis">
+            <span class="project-kpi">Excel Analysis</span>
+            <span class="project-kpi">Power BI</span>
+         </span>
+         <h2>Café Sales Analysis</h2>
+         <p>End-to-end cleaning and analysis of a real-world café dataset with ~10,000 transaction records and Power BI dashboarding.</p>
+         <div class="project-tech">
+            <span>Excel</span><span>Power BI</span><span>Kaggle</span>
+         </div>
+         <div class="project-footer">
+            <a href="https://github.com/SiddheshCodeMaster/Data-Analysis/tree/2096e01dc47285c20f269ef66065ed0bd87babac/Dirty%20Cafe%20Sales" target="_blank">View on GitHub →</a>
+            <span>Data Analysis</span>
+         </div>
+      </div>
+
+      <!-- Selenium Scraper -->
+      <div class="project-card" data-category="data-engineering">
+         <div class="project-accent-bar bar-emerald"></div>
+         <span class="project-kpis">
+            <span class="project-kpi">Dynamic Scraping</span>
+            <span class="project-kpi">Automation</span>
+         </span>
+         <h2>Selenium Scraper</h2>
+         <p>Automated scraping framework for dynamic websites using Selenium-based browser automation.</p>
+         <div class="project-tech">
+            <span>Python</span><span>Selenium</span><span>Web Drivers</span>
+         </div>
+         <div class="project-footer">
+            <a href="https://github.com/SiddheshCodeMaster/Web-Scraping-uisng-Selenium" target="_blank">View on GitHub →</a>
+            <span>Data Engineering</span>
+         </div>
+      </div>
+
+   </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════
+     EXPERIENCE
+════════════════════════════════════════ -->
+<div class="section reveal" id="experience" data-animate>
+   <div class="section-label">Experience</div>
+   <h2 class="section-title">Where I've Worked</h2>
+   <p class="section-subtitle">From Fortune 500 consulting to high-growth startup analytics.</p>
+
+   <div class="timeline">
+
       <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content minimal-exp">
-          <img src="{{ url_for('static', filename='images/oracle-financial-services-software-limited-logo.png') }}"
-            alt="OFSS Logo" class="exp-logo-minimal">
-          <div class="exp-text">
-            <h2>Oracle Financial Services Software - Associate Consultant</h2>
-            <span class="timeline-date">July 2023 – August 2025</span>
-          </div>
-        </div>
+         <div class="timeline-dot"></div>
+         <div class="timeline-content">
+            <div class="minimal-exp">
+               <img src="{{ url_for('static', filename='images/synerpro-solutions-logo.png') }}"
+                    alt="Synerpro" class="exp-logo-minimal">
+               <div class="exp-text">
+                  <h2>Product Analyst · Synerpro Solutions LLP</h2>
+                  <span class="timeline-date">September 2025 – Present</span>
+               </div>
+            </div>
+         </div>
       </div>
 
       <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content minimal-exp">
-          <img src="{{ url_for('static', filename='images/easyecom-logo.png') }}" alt="OFSS Logo"
-            class="exp-logo-minimal">
-          <div class="exp-text">
-            <h2>EASYECOM Pvt. Ltd. - Business Analyst Intern</h2>
-            <span class="timeline-date">January 2024 - June 2024</span>
-          </div>
-        </div>
+         <div class="timeline-dot"></div>
+         <div class="timeline-content">
+            <div class="minimal-exp">
+               <img src="{{ url_for('static', filename='images/oracle-financial-services-software-limited-logo.png') }}"
+                    alt="Oracle" class="exp-logo-minimal">
+               <div class="exp-text">
+                  <h2>Associate Consultant · Oracle Financial Services Software</h2>
+                  <span class="timeline-date">July 2023 – August 2025</span>
+               </div>
+            </div>
+         </div>
       </div>
 
       <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content minimal-exp">
-          <img src="{{ url_for('static', filename='images/genefied_logo.png') }}" alt="OFSS Logo"
-            class="exp-logo-minimal">
-          <div class="exp-text">
-            <h2>Genefied Brand Protection Solutions - Data Analyst Intern</h2>
-            <span class="timeline-date">June 2022 - August 2022</span>
-          </div>
-        </div>
+         <div class="timeline-dot"></div>
+         <div class="timeline-content">
+            <div class="minimal-exp">
+               <img src="{{ url_for('static', filename='images/easyecom-logo.png') }}"
+                    alt="EasyEcom" class="exp-logo-minimal">
+               <div class="exp-text">
+                  <h2>Business Analyst Intern · EASYECOM Pvt. Ltd.</h2>
+                  <span class="timeline-date">January 2024 – June 2024</span>
+               </div>
+            </div>
+         </div>
       </div>
-
 
       <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content minimal-exp">
-          <img src="{{ url_for('static', filename='images/the-akshaya-patra-foundation-logo.png') }}" alt="OFSS Logo"
-            class="exp-logo-minimal">
-          <div class="exp-text">
-            <h2>The Akshaya Patra Foundation - Student Intern (Backend Development)</h2>
-            <span class="timeline-date">August 2021 - November 2021</span>
-          </div>
-        </div>
+         <div class="timeline-dot"></div>
+         <div class="timeline-content">
+            <div class="minimal-exp">
+               <img src="{{ url_for('static', filename='images/genefied_logo.png') }}"
+                    alt="Genefied" class="exp-logo-minimal">
+               <div class="exp-text">
+                  <h2>Data Analyst Intern · Genefied AI</h2>
+                  <span class="timeline-date">June 2022 – August 2022</span>
+               </div>
+            </div>
+         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="container" id="blogs" data-animate>
-    <h1 style="text-align:center;">Blogs & Activities</h1>
-    <h2 style="margin-top:20px;">Medium Blogs</h2>
-    <script>
-      async function loadMediumBlogs() {
-        try {
-          const res = await fetch("/api/medium/blogs");
-          const data = await res.json();
-          const container = document.getElementById("blogs-container");
-          container.innerHTML = "";
+      <div class="timeline-item">
+         <div class="timeline-dot"></div>
+         <div class="timeline-content">
+            <div class="minimal-exp">
+               <img src="{{ url_for('static', filename='images/the-akshaya-patra-foundation-logo.png') }}"
+                    alt="DataPipeline" class="exp-logo-minimal">
+               <div class="exp-text">
+                  <h2>Student Intern (Product Analysis) · The Akshaya Patra Foundation (NGO - India)</h2>
+                  <span class="timeline-date">August 2021 – November 2021</span>
+               </div>
+            </div>
+         </div>
+      </div>
 
-          data.blogs.forEach(blog => {
-            let cleanSummary = "";
-            if (blog.summary) {
-              cleanSummary = blog.summary.replace(/<[^>]+>/g, '').slice(0, 150);
-            }
+   </div>
+</div>
 
-            const card = document.createElement("div");
-            card.classList.add("blog-card");
+<div class="divider"></div>
 
-            card.innerHTML = `
-        <img src="${blog.thumbnail || '/static/images/default-blog.jpg'}" class="blog-thumbnail">
+<!-- ═══════════════════════════════════════
+     EDUCATION
+════════════════════════════════════════ -->
+<div class="section reveal" id="education" data-animate>
+   <div class="section-label">Education</div>
+   <h2 class="section-title">Academic Journey</h2>
 
-        <h3>${blog.title}</h3>
-        <p>${cleanSummary}...</p>
+   <div class="edu-grid">
 
-        <a href="${blog.link}" target="_blank" class="blog-read-btn">
-          Read More →
-        </a>
-      `;
+      <div class="education-card">
+         <div class="education-top">
+            <img src="{{ url_for('static', filename='images/university_of_illinois_urbana_champaign_logo.png') }}"
+                 alt="UIUC" class="edu-logo">
+            <div>
+               <h2>Master of Science in Information Management (MSIM)</h2>
+               <p class="edu-school">University of Illinois, Urbana-Champaign</p>
+            </div>
+         </div>
+         <div class="edu-meta">
+            <span><i class="fa-solid fa-calendar"></i> Fall 2026 (August, 2026) – Expected</span>
+            <span><i class="fa-solid fa-location-dot"></i> Champaign, IL, USA</span>
+         </div>
+         <div class="edu-gpa">Specialization: Data Science, Knowledge Management & Information Consulting</div>
+         <div class="edu-section">
+            <strong>Focus Areas</strong>
+            <p>Machine Learning Systems · Data Engineering · Distributed Computing · Large Scale Data Analytics</p>
+         </div>
+      </div>
 
-            container.appendChild(card);
-          });
-        } catch (err) {
-          console.error("Error loading Medium blogs:", err);
-        }
-      }
+      <div class="education-card">
+         <div class="education-top">
+            <img src="{{ url_for('static', filename='images/symbiosis_logo.png') }}"
+                 alt="SIT" class="edu-logo">
+            <div>
+               <h2>B.Tech in Computer Science & Engineering</h2>
+               <p class="edu-school">Symbiosis Institute of Technology, Pune</p>
+            </div>
+         </div>
+         <div class="edu-meta">
+            <span><i class="fa-solid fa-calendar"></i> March 2019 – July 2023</span>
+            <span><i class="fa-solid fa-location-dot"></i> Pune, India</span>
+         </div>
+         <div class="edu-gpa">Honors in Data Science · GPA 7.93 / 10</div>
+         <div class="edu-section">
+            <strong>Focus Areas</strong>
+            <p>Machine Learning · Data Mining · Database Systems · AI · Business Intelligence</p>
+         </div>
+         <div class="edu-section">
+            <strong>Achievements</strong>
+            <p>
+               <li>Graduated with Honors in Data Science</li>
+               <li>Published technical blogs on AI pipelines and production monitoring</li>
+               <li><b>SIT Prota 2021</b> — CS A · Silver Medal, Goalkeeper of the Tournament ⚽</li>
+               <li><b>SIT Pre-Prota 2021</b> — CS A · Gold Medal ⚽</li>
+            </p>
+         </div>
+      </div>
 
-      function scrollBlogs(direction) {
-        const container = document.getElementById("blogs-container");
-        const scrollAmount = 350; // px per click
-        container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
-      }
+   </div>
+</div>
 
-      window.addEventListener("load", loadMediumBlogs);
-    </script>
+<div class="divider"></div>
 
-    <div class="blog-carousel-wrapper">
-      <button class="carousel-btn left-btn" onclick="scrollBlogs(-1)">&#10094;</button>
+<!-- ═══════════════════════════════════════
+     BLOGS & ACTIVITIES
+════════════════════════════════════════ -->
+<div class="section reveal" id="blogs" data-animate>
+   <div class="section-label">Writing</div>
+   <h2 class="section-title">Blogs & Activities</h2>
+   <p class="section-subtitle">Sharing what I learn — practical data science, systems design, and real-world engineering.</p>
 
-      <div id="blogs-container" class="blog-carousel"></div>
+   <div class="blog-profile-grid">
 
-      <button class="carousel-btn right-btn" onclick="scrollBlogs(1)">&#10095;</button>
-    </div>
-  </div>
+      <div class="blog-profile-card">
+         <div class="blog-platform">Medium</div>
+         <h2>Data Science & Analytics Stories</h2>
+         <p class="blog-profile-desc">Writing about Machine Learning, real-world analytics, production-ready systems, and practical insights from the field.</p>
+         <a href="https://medium.com/@siddhesh.codemaster.github" target="_blank" class="blog-profile-link">
+            Visit Medium →
+         </a>
+      </div>
 
+      <div class="blog-profile-card">
+         <div class="blog-platform">Dev.to</div>
+         <h2>Backend & System Design</h2>
+         <p class="blog-profile-desc">Hands-on experiences in backend development, system design, and building scalable data-driven applications from scratch.</p>
+         <a href="https://dev.to/siddheshcodemaster" target="_blank" class="blog-profile-link">
+            Visit Dev.to →
+         </a>
+      </div>
 
-  <div class="container" id="volunteering" data-animate>
-    <h1
-      style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-      Volunteering & Certifications</h1>
-    <div class="vol-cert-grid">
+   </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════
+     RECOMMENDATIONS
+════════════════════════════════════════ -->
+<div class="section reveal" id="testimonials" data-animate>
+   <div class="section-label">Social Proof</div>
+   <h2 class="section-title">What Colleagues Say</h2>
+
+   <div class="testimonial-wrapper">
+
+      <div class="testimonial-card">
+         <div class="testimonial-quote-mark">"</div>
+         <div class="testimonial-content">
+            Siddhesh is a tremendous data-savvy individual who's confident about providing
+            solutions and workarounds. Working with him has always been fun — his curiosity
+            to learn in-depth about products and research in tech stack was very helpful to
+            the team. He was a valuable asset. All the best!
+         </div>
+         <div class="testimonial-left">
+            <img src="{{ url_for('static', filename='images/Harsh_Gupta_photo.png') }}"
+                 alt="Harsh Gupta" class="testimonial-img">
+            <div class="testimonial-author-info">
+               <strong>Harsh Gupta</strong>
+               <span>Senior IT Business Analyst<br>Forever New Clothing</span>
+            </div>
+         </div>
+      </div>
+
+      <div class="testimonial-card">
+         <div class="testimonial-quote-mark">"</div>
+         <div class="testimonial-content">
+            Siddhesh impressed us with his ability to quickly turn complex data into clear
+            insights. What I admired most was his curiosity and ownership — he never limited
+            himself to assigned tasks but suggested improvements and fresh ideas. For an
+            intern, that level of maturity and passion is rare.
+         </div>
+         <div class="testimonial-left">
+            <img src="{{ url_for('static', filename='images/Ayush_jhawar_photo.png') }}"
+                 alt="Ayush Jhawar" class="testimonial-img">
+            <div class="testimonial-author-info">
+               <strong>Ayush Jhawar</strong>
+               <span>Founder<br>Genefied AI</span>
+            </div>
+         </div>
+      </div>
+
+   </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════
+     CERTIFICATIONS & VOLUNTEERING
+════════════════════════════════════════ -->
+<div class="section reveal" id="volunteering" data-animate>
+   <div class="section-label">Credentials</div>
+   <h2 class="section-title">Certifications &<br>Volunteering</h2>
+
+   <div class="vol-cert-grid">
+
       <div class="vol-cert-card">
-        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="cf2f2f56-c813-4408-ae1f-d0de6b8fab1b" data-share-badge-host="https://www.credly.com">   
-        </div>
-        <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-        <h3>Google Cloud Technical Series - Jan 2026</h3>
-        <p>Completed the Google Cloud Technical Series 2026 (OnBoard Edition), 
-            a hands-on technical program focused on Generative AI, cloud-native architecture, DevOps practices, and scalable data engineering workflows. 
-            Built and deployed AI-integrated cloud solutions using modern Google Cloud tools 
-            and best practices for production-ready systems.
-        </p> 
+         <img src="{{ url_for('static', filename='images/oracle-volunteering.png') }}"
+              alt="Oracle" class="issuer-logo">
+         <h3>Oracle Volunteering (OV)</h3>
+         <div class="cert-meta">Oracle · Community Initiative</div>
+         <p>Blood donation camp with Hiranandani Hospital, physics learning aids for SSC students, and a beach cleanup removing 350+ kg of plastic.</p>
       </div>
-      <div class="vol-cert-card">
-        <img src="{{ url_for('static', filename='images/oracle-volunteering.png') }}" alt="Oracle Volunteering Logo"
-          class="issuer-logo">
-        <h3>Oracle Volunteering (OV)</h3>
-        <p>Volunteered in diverse initiatives including organizing a blood donation camp with Hiranandani Hospital,
-          designing physics learning aids for SSC students to simplify concepts, and participating in a beach cleanup
-          drive that removed over 350 kg of plastic waste—demonstrating commitment to community health, education, and
-          the environment.</p>
-      </div>
-      <div class="vol-cert-card">
-        <img src="{{ url_for('static', filename='images/football-logo.png') }}" alt="Neptune Society Football - Logo"
-          class="issuer-logo">
-        <h3>Football Training for Society Kids</h3>
-        <p>Initiated and lead weekly football sessions for children in the society, focusing on nurturing their interest
-          and love for the sport. Teach fundamental skills, game rules, and the spirit of teamwork and sportsmanship.
-          Aim to instill discipline, passion, and appreciation for the beauty of the game through structured yet fun
-          training.</p>
-      </div>
-      <div class="vol-cert-card">
-        <img src="{{ url_for('static', filename='images/alison-learning-logo.png') }}" alt="Alison Logo"
-          class="issuer-logo">
-        <h3>Diploma in Community Development</h3>
-        <p><strong>Issued by:</strong> Alison <strong></strong></p>
-        <p><Strong>Issue Date:</strong> September 2021</p>
-        <p>Gain an understanding of the core values, concepts, and practices in the community development sector. Learn
-          how community health is an essential component of development efforts.
-          Explore ways to identify key issues affecting your community. Develop the skills to critically assess and
-          address these challenges. Understand the role of inclusive participation and sustainable solutions in driving
-          change.
-          Empower yourself to contribute meaningfully to community well-being and growth.</p>
-      </div>
-      <div class="vol-cert-card">
-        <img src="{{ url_for('static', filename='images/john-hopkins-university-logo.png') }}"
-          alt="John Hopkins University Logo" class="issuer-logo">
-        <h3>The Data Scientist Toolbox</h3>
-        <p><strong>Issued by:</strong> John Hopkins University <strong></strong></p>
-        <p><Strong>Issue Date:</strong> April 2024</p>
-        <p>Completed Course covering SQL, R, dashboarding, data cleaning, and business communication via data.</p>
-        <a href="https://coursera.org/share/7fe9fccfa87ae548ea8380f01ae53021" target="_blank">View Credential →</a>
-      </div>
-      <div class="vol-cert-card">
-        <img src="{{ url_for('static', filename='images/IBM-logo.png') }}" alt="IBM Logo" class="issuer-logo">
-        <h3>Python for Data Science & AI</h3>
-        <p><strong>Issued by:</strong> IBM <strong></strong></p>
-        <p><Strong>Issue Date:</strong> April 2021 </p>
-        <p>Completed a hands-on Python course covering data types, control flow, functions, OOP,
-          and file handling. Gained practical experience with NumPy, Pandas, APIs, and web scraping using BeautifulSoup.
-          Built real-world projects in Jupyter Notebooks aligned with Data Science and Automation tasks.</p>
-        <a href="https://www.credly.com/badges/1d029240-3d11-43e5-9f01-1525b98a34ad?source=linked_in_profile"
-          target="_blank">View Credential →</a>
-      </div>
-      <div class="vol-cert-card">
-        <img src="{{ url_for('static', filename='images/university-of-michigan-logo.png') }}"
-          alt="University of Michigan Logo" class="issuer-logo">
-        <h3>Using Databases with Python</h3>
-        <p><strong>Issued by:</strong> University of Michigan <strong></strong></p>
-        <p><Strong>Issue Date:</strong> December 2020 </p>
-        <p>Completed a course on SQL and database design using SQLite3, focusing on multi-step data gathering and
-          processing.
-          Built web crawlers and visualized data using D3.js.
-          Strengthened skills in Python 3 through hands-on projects aligned with real-world data workflows.</p>
-        <a href="https://coursera.org/verify/762ZWHPRMNH5" target="_blank">View Credential →</a>
-      </div>
-      <div class="vol-cert-card">
-        <img src="{{ url_for('static', filename='images/university-of-alberta-logo.png') }}"
-          alt="University of Alberta Logo" class="issuer-logo">
-        <h3>Software processes and Agile Practices</h3>
-        <p><strong>Issued by:</strong> University of Alberta <strong></strong></p>
-        <p><Strong>Issue Date:</strong> April 2020 </p>
-        <p>Gained knowledge of various software development process models and their applicability to real-world
-          projects.
-          Learned to evaluate and choose appropriate models based on project context.
-          Applied Agile principles and project management practices in software development scenarios.</p>
-        <a href="https://coursera.org/verify/GX4MEGDR85EN" target="_blank">View Credential →</a>
-      </div>
-    </div>
-  </div>
 
-  <div class="container" id="contact">
-    <h1
-      style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-      Contact Me</h1>
-    <form action="https://formspree.io/f/xwpbnoaw" method="POST" class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="_replyto" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
+      <div class="vol-cert-card">
+         <img src="{{ url_for('static', filename='images/football-logo.png') }}"
+              alt="Football" class="issuer-logo">
+         <h3>Football Training for Society Kids</h3>
+         <div class="cert-meta">Community Initiative · Ongoing</div>
+         <p>Initiated and lead weekly football sessions for children — nurturing skills, teamwork, and love for the sport.</p>
+      </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 DataSavyWithSiddhesh · Built by Siddhesh Shankar</p>
-    <div class="footer-links">
-      <a href="https://github.com/SiddheshCodeMaster" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/siddheshshankar" target="_blank">LinkedIn</a>
-      <a href="mailto:shankarsiddhesh1606@gmail.com">Email</a>
-    </div>
-  </footer>
+      <div class="vol-cert-card">
+         <img src="{{ url_for('static', filename='images/alison-learning-logo.png') }}"
+              alt="Alison" class="issuer-logo">
+         <h3>Diploma in Community Development</h3>
+         <div class="cert-meta">Alison · September 2021</div>
+         <p>Core values, practices in community development. Community health, inclusive participation, and sustainable change.</p>
+      </div>
 
-  <button class="theme-toggle" onclick="document.body.classList.toggle('dark')">🌓</button>
+      <div class="vol-cert-card">
+         <img src="{{ url_for('static', filename='images/john-hopkins-university-logo.png') }}"
+              alt="JHU" class="issuer-logo">
+         <h3>The Data Scientist Toolbox</h3>
+         <div class="cert-meta">Johns Hopkins University · April 2024</div>
+         <p>SQL, R, dashboarding, data cleaning, and business communication via data.</p>
+         <a href="https://coursera.org/share/7fe9fccfa87ae548ea8380f01ae53021" target="_blank">View Credential ↗</a>
+      </div>
 
-  <script>
-    const observer = new IntersectionObserver((entries) => {
+      <div class="vol-cert-card">
+         <img src="{{ url_for('static', filename='images/IBM-logo.png') }}"
+              alt="IBM" class="issuer-logo">
+         <h3>Python for Data Science & AI</h3>
+         <div class="cert-meta">IBM · April 2021</div>
+         <p>Hands-on Python covering NumPy, Pandas, APIs, and web scraping. Built real-world projects in Jupyter Notebooks.</p>
+         <a href="https://www.credly.com/badges/1d029240-3d11-43e5-9f01-1525b98a34ad" target="_blank">View Credential ↗</a>
+      </div>
+
+      <div class="vol-cert-card">
+         <img src="{{ url_for('static', filename='images/university-of-michigan-logo.png') }}"
+              alt="U of M" class="issuer-logo">
+         <h3>Using Databases with Python</h3>
+         <div class="cert-meta">University of Michigan · December 2020</div>
+         <p>SQL and database design using SQLite3, web crawlers, and D3.js data visualization.</p>
+         <a href="https://coursera.org/verify/762ZWHPRMNH5" target="_blank">View Credential ↗</a>
+      </div>
+
+   </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════
+     CONTACT
+════════════════════════════════════════ -->
+<div class="section reveal" id="contact" data-animate>
+   <div class="contact-grid">
+
+      <div class="contact-left">
+         <div class="contact-label">Contact</div>
+         <h1 class="contact-title">Let's<br><span>Connect.</span></h1>
+         <p class="contact-desc">
+            Actively seeking full-time opportunities in Data Science, Data Engineering,
+            and Product Management. Let's talk about how I can bring value to your team.
+         </p>
+         <div class="contact-socials">
+            <a href="https://linkedin.com/in/siddheshshankar" target="_blank">
+               <i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/SiddheshCodeMaster" target="_blank">
+               <i class="fa-brands fa-github"></i></a>
+            <a href="https://medium.com/@siddhesh.codemaster.github" target="_blank">
+               <i class="fa-brands fa-medium"></i></a>
+            <a href="mailto:shankarsiddhesh1606@gmail.com">
+               <i class="fa-solid fa-envelope"></i></a>
+         </div>
+      </div>
+
+      <div class="contact-right">
+
+         <div class="contact-card">
+            <div class="contact-icon email"><i class="fa-solid fa-envelope"></i></div>
+            <div class="contact-info">
+               <span>Email</span>
+               <strong id="emailText">shankarsiddhesh1606@gmail.com</strong>
+            </div>
+            <button class="copy-btn" onclick="copyText('emailText', this)">
+               <i class="fa-regular fa-copy"></i>
+            </button>
+         </div>
+
+         <div class="contact-card">
+            <div class="contact-icon phone"><i class="fa-solid fa-phone"></i></div>
+            <div class="contact-info">
+               <span>Phone</span>
+               <strong id="phoneText">+91 77389 46801</strong>
+            </div>
+            <button class="copy-btn" onclick="copyText('phoneText', this)">
+               <i class="fa-regular fa-copy"></i>
+            </button>
+         </div>
+
+         <div class="contact-card">
+            <div class="contact-icon location"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="contact-info">
+               <span>Location</span>
+               <strong>Mumbai, India</strong>
+            </div>
+         </div>
+
+         <a href="{{ url_for('static', filename='resume/Siddhesh_Shankar_Resume.pdf') }}"
+            download class="btn-primary" style="justify-content:center; margin-top:6px;">
+            <i class="fa-solid fa-download"></i> Download Resume
+         </a>
+
+      </div>
+   </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer class="footer">
+   <div class="footer-inner">
+      <p class="footer-copy">© 2025 DataSavyWithSiddhesh · Built by Siddhesh Shankar</p>
+      <p class="footer-copy" style="color:var(--accent);">Made with ♥ & Python</p>
+   </div>
+</footer>
+
+<!-- ═══════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════════ -->
+<script>
+   // ── Navbar scroll state ──
+   const navbar = document.getElementById('navbar');
+   window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+   });
+
+   // ── Scroll reveal ──
+   const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
+         if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+         }
       });
-    }, { threshold: 0.1 });
+   }, { threshold: 0.08 });
 
-    document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
-    window.addEventListener('load', function () {
+   document.querySelectorAll('.reveal, [data-animate]').forEach(el => revealObserver.observe(el));
+
+   // ── Project filter ──
+   function filterProjects(category, btn) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.project-card').forEach(card => {
+         card.style.display = card.dataset.category === category ? 'flex' : 'none';
+      });
+   }
+   document.addEventListener('DOMContentLoaded', () => {
+      filterProjects('ai-ml', document.querySelector('.tab-btn'));
+   });
+
+   // ── Copy to clipboard ──
+   function copyText(id, btn) {
+      navigator.clipboard.writeText(document.getElementById(id).innerText);
+      btn.classList.add('copied');
+      btn.innerHTML = '✓';
       setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: 'auto' });
-        history.replaceState(null, null, window.location.pathname);
+         btn.classList.remove('copied');
+         btn.innerHTML = '<i class="fa-regular fa-copy"></i>';
+      }, 1500);
+   }
+
+   // ── Reset scroll on load ──
+   window.addEventListener('load', () => {
+      setTimeout(() => {
+         window.scrollTo({ top: 0, behavior: 'auto' });
+         history.replaceState(null, null, window.location.pathname);
       }, 100);
-    });
-
-    function showResume() {
-      document.getElementById('resume-frame').style.display = 'block';
-    }
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.1/lottie.min.js"></script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      lottie.loadAnimation({
-        container: document.getElementById('lottie-animation'),
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: "{{ url_for('static', filename='lottie/analytics.json') }}"
-      });
-    });
-  </script>
+   });
+</script>
 
 </body>
-
 </html>
